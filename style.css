@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: rgb(96, 39, 210);
+}
+
+header {
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+li a:hover {
+    transition: 0.6s;
+    color: rgb(96, 39, 210);
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+        perspective: 200px;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu li {
+        background-color: #24252a;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .open {
+        display: block;
+    }
+}
+
+
+/* ================= ANIMAÇÃO 1 =================
+*/
+.mobile-menu li {
+    transform: rotateZ(-90deg) rotateY(90deg);
+    transform-origin: top right;
+    animation: animation1 1s ease forwards;
+}
+
+.mobile-menu li:nth-child(2) {
+    animation-delay: 300ms;
+    transform-origin: top left;
+    transform: rotateZ(90deg) rotateY(-90deg);
+}
+
+.mobile-menu li:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+.mobile-menu li:nth-child(4) {
+    animation-delay: 900ms;
+    transform-origin: top left;
+    transform: rotateZ(90deg) rotateY(-90deg);
+}
+
+.mobile-menu li:nth-child(5) {
+    animation-delay: 1200ms;
+}
+ 
+@keyframes animation1 {
+    to {
+        transform: rotate(0);
+    }
+}
+/*
+=============== ANIMAÇÃO 2 ====================
+
+.mobile-menu li {
+    animation: animation2 1s ease forwards;
+    transform: rotateY(90deg) rotateX(-90deg);
+    transform-origin: top right;
+    opacity: 1;
+}
+
+.mobile-menu li:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.mobile-menu li:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+.mobile-menu li:nth-child(4) {
+    animation-delay: 900ms;
+}
+
+.mobile-menu li:nth-child(5) {
+    animation-delay: 1200ms;
+}
+
+
+@keyframes animation2 {
+    to {
+        transform: rotate(0);
+        opacity: 1;
+    }   
+}
+
+/*
+ ============== ANIMAÇÃO 3 ===================== 
+
+.mobile-menu li {
+    animation: animation3 1s ease forwards;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    opacity: 0;
+}
+
+.mobile-menu li:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.mobile-menu li:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+.mobile-menu li:nth-child(4) {
+    animation-delay: 900ms;
+}
+
+.mobile-menu li:nth-child(5) {
+    animation-delay: 1200ms;
+}
+
+@keyframes animation3 {
+    to {
+        transform: rotate(0);
+        opacity: 1;
+    }   
+}
+
+
+
+ ================== ANIMAÇÃO 4 ================ 
+
+.mobile-menu li {
+    animation: animation4 500ms ease forwards;
+    transform-origin: top;
+    opacity: 0;
+}
+
+.mobile-menu li:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.mobile-menu li:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+.mobile-menu li:nth-child(4) {
+    animation-delay: 900ms;
+}
+
+.mobile-menu li:nth-child(5) {
+    animation-delay: 1200ms;
+}
+
+@keyframes animation4 {
+    0% {
+        transform: scale(1);
+    }   
+
+    50% {
+        transform: scale(1.1);
+    }
+  
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+} 
+
+ ======== ANIMAÇÃO 5 ========
+
+.mobile-menu {
+    perspective: none;
+}
+
+.mobile-menu li {
+    animation: animation5 1s ease forwards;
+    transform-origin: right;
+    transform: rotateY(90deg);
+}
+
+.mobile-menu li:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.mobile-menu li:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+.mobile-menu li:nth-child(4) {
+    animation-delay: 900ms;
+}
+
+.mobile-menu li:nth-child(5) {
+    animation-delay: 1200ms;
+}
+
+@keyframes animation5 {
+    to {
+        transform: rotate(0);
+    }
+} 
+
+*/
